@@ -12,10 +12,14 @@
     <div class="section">
       <h2>Character Details</h2>
       <div class="row">
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Class and Subclass" />
-        <input type="number" placeholder="Level" />
-      </div>
+  <input type="text" placeholder="Name" />
+  <input type="text" placeholder="Class and Subclass" />
+  
+  <div class="input-container">
+    <span class="fixed-text">Level</span>
+    <input type="number" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="row">
         <input type="text" placeholder="Race" />
         <input type="text" placeholder="Background" />
@@ -23,107 +27,220 @@
       </div>
       <div class="row">
         <input type="text" placeholder="Kingdom of Origin" />
-        <input type="number" placeholder="Armor Class" />
-        <input type="number" placeholder="Initiative Bonus" />
+        <div class="input-container">
+    <span class="fixed-text">Armor Class</span>
+    <input type="number" class="input-with-fixed-text" />
+  </div>
+        <div class="input-container">
+    <span class="fixed-text">Initiative Bonus</span>
+    <input type="number" class="input-with-fixed-text" />
+  </div> </div>
+      <div class="row">
+        <div class="input-container">
+    <span class="fixed-text">Health Points</span>
+    <input type="number" class="input-with-fixed-text" />
+  </div>
+        <div class="input-container">
+    <span class="fixed-text">Hit Die</span>
+    <input type="number" class="input-with-fixed-text" />
+  </div>
+        <div class="input-container">
+    <span class="fixed-text">Eldricon</span>
+    <input type="number" class="input-with-fixed-text" />
+        </div>
       </div>
       <div class="row">
-        <input type="number" placeholder="Proficiency Bonus" />
-        <input type="number" placeholder="Speed" />
-        <input type="number" placeholder="Hero Points" />
-      </div>
-      <div class="row">
-        <input type="number" placeholder="HP" />
-        <input type="text" placeholder="Hit Die" />
-        <input type="text" placeholder="Eldcricon" />
-      </div>
-      <div class="row">
-  <!-- Saving Throws Textarea (taking half the width) -->
-  <textarea placeholder="Saving Throws"></textarea>
-
+  <div class="input-container saving-throws">
+    <span class="fixed-text">Saving Throws</span>
+    <textarea placeholder="Saving Throws"></textarea>
+  </div>
   <!-- Death Saving Throws Section -->
   <div class="death-saving-throws">
-    <label>Death Saving Throws</label>
+    <!-- Label Wrapper -->
+    <div class="death-saving-label">
+      <label>Death Saving Throws</label>
+    </div>
 
     <!-- Successes Section with 3 bubbles -->
     <div class="death-save">
-      <input type="radio" name="death-save-success" class="death-save-circle" id="success1">
-      <input type="radio" name="death-save-success" class="death-save-circle" id="success2">
-      <input type="radio" name="death-save-success" class="death-save-circle" id="success3">
-      <span>Successes</span>
-    </div>
+      <div class="death-save-section">
+        <span>Successes</span>
+        <div class="bubbles">
+          <input type="radio" name="death-save-success" class="death-save-circle" id="success1">
+          <input type="radio" name="death-save-success" class="death-save-circle" id="success2">
+          <input type="radio" name="death-save-success" class="death-save-circle" id="success3">
+        </div>
+      </div>
 
-    <!-- Failures Section with 3 bubbles -->
-    <div class="death-save">
-      <input type="radio" name="death-save-failure" class="death-save-circle" id="failure1">
-      <input type="radio" name="death-save-failure" class="death-save-circle" id="failure2">
-      <input type="radio" name="death-save-failure" class="death-save-circle" id="failure3">
-      <span>Failures</span>
+      <!-- Divider Line -->
+      <div class="separator"></div>
+
+      <!-- Failures Section with 3 bubbles -->
+      <div class="death-save-section">
+        <span>Failures</span>
+        <div class="bubbles">
+          <input type="radio" name="death-save-failure" class="death-save-circle" id="failure1">
+          <input type="radio" name="death-save-failure" class="death-save-circle" id="failure2">
+          <input type="radio" name="death-save-failure" class="death-save-circle" id="failure3">
+        </div>
+      </div>
     </div>
   </div>
 </div>
     <div class="section">
       <h2>Skills</h2>
       <div class="skill-row">
-        <span>Might:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Might:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="skill-row">
-        <span>Sorcery:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Sorcery:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="skill-row">
-        <span>Sneak:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Sneak:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="skill-row">
-        <span>Mind:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Mind:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="skill-row">
-        <span>Charm:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Charm:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="skill-row">
-        <span>Awareness:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Awareness:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="skill-row">
-        <span>Healing:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Healing:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="skill-row">
-        <span>Wilderness:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Wilderness:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="skill-row">
-        <span>Nimbleness:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Nimbleness:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="skill-row">
-        <span>Artistry:</span>
-        <input type="text" placeholder="Proficiency" />
-        <input type="text" placeholder="Score" />
-        <input type="text" placeholder="Modifier" />
-      </div>
+  <span>Artistry:</span>
+  <div class="input-container">
+    <span class="fixed-text">Proficiency</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Score</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+  <div class="input-container">
+    <span class="fixed-text">Modifier</span>
+    <input type="text" class="input-with-fixed-text" />
+  </div>
+</div>
       <div class="row">
+        <textarea placeholder="Weapon Proficiencies"></textarea>
         <textarea placeholder="Other Proficiencies"></textarea>
       </div>
     </div>
