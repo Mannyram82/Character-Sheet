@@ -207,3 +207,31 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]:focus::-webkit-slider-runnable-track {
   background: white;         /* Make the track white when focused */
 }
+/* Add this at the end of your CSS file */
+textarea[placeholder="Saving Throws"] {
+  height: 20px; /* Reduce height to half (from 200px to 100px) */
+}
+/* Ensures a better layout for the death save section */
+.death-saving-throws {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Align the bubbles in a row for success and failure */
+.death-save {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space between Successes and Failures */
+}
+
+/* Space out the bubbles for success/failure */
+.death-save input[type="radio"] {
+  margin-right: 50px; /* Adjust the space between bubbles */
+}
+
+/* Labels for successes and failures */
+.death-save span {
+  margin-left: 10px; /* Space the label from the radio buttons */
+  font-size: 14px; /* Adjust text size */
+}
