@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 8.5in;
+    min-width: 8.5in;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+label {
+    font-size: 1em;
+    display: block;
+    margin: 5px 0;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.info-row div {
+    flex: 1;
+}
+
+.ac-icon, .hero-points, .gold-icon {
+    display: inline-block;
+    width: 30%;
+}
+
+/* Skills Section Styling */
+.skills {
+    margin: 20px;
+}
+
+.skills h2 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Styling each skill block */
+.skill {
+    width: 18%; /* Adjusted for five columns per row */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Label styling */
+.skill label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Input field styling */
+.skill input[type="text"] {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Skill score and modifier styling */
+.skill input[id$="-score"] {
+    width: 50px; /* Slightly wider for the skill score */
+}
+
+.skill input[id$="-modifier"] {
+    width: 50px; /* Same width for the modifier */
+}
+
+/* Placeholder text styling */
+.skill input::placeholder {
+    color: #888;
+    font-size: 0.9em;
+}
