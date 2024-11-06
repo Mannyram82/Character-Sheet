@@ -1,362 +1,383 @@
 /* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  background-color: #f0e6d2;
-  color: #333;
-  padding: 20px;
-  margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #f0e6d2;
+    color: #333;
+    padding: 20px;
+    margin: 0;
 }
 
 .container {
-  width: 100%; /* Full width for the container */
-  max-width: 8.5in; /* Match Website 1's width */
-  min-width: 8.5in; /* Ensure it doesn't shrink below the desired width */
-  margin: 0 auto; /* Center the container */
-  background-color: #fff;
-  padding: 30px; /* Increased padding for better spacing */
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width for the container */
+    max-width: 8.5in; /* Match Website 1's width */
+    min-width: 8.5in; /* Ensure it doesn't shrink below the desired width */
+    margin: 0 auto; /* Center the container */
+    background-color: #fff;
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  text-align: center;
-  color: #8b0000;
-  margin-bottom: 30px; /* Increased space below heading */
-  font-size: 28px; /* Larger heading size */
+    text-align: center;
+    color: #8b0000;
+    margin-bottom: 30px; /* Increased space below heading */
+    font-size: 28px; /* Larger heading size */
 }
 
 .section {
-  margin-bottom: 30px; /* More space between sections */
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
+    margin-bottom: 30px; /* More space between sections */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
 }
 
 .section h2 {
-  color: #8b0000;
-  margin-bottom: 15px; /* Space between the heading and content */
-  font-size: 20px; /* Slightly bigger section title */
+    color: #8b0000;
+    margin-bottom: 15px; /* Space between the heading and content */
+    font-size: 20px; /* Slightly bigger section title */
 }
 
 .row {
-  display: flex;
-  margin-bottom: 15px; /* More space between rows */
+    display: flex;
+    margin-bottom: 15px; /* More space between rows */
 }
 
 .row > * {
-  flex: 1;
-  margin-right: 15px; /* Increase space between flexed items */
+    flex: 1;
+    margin-right: 15px; /* Increase space between flexed items */
 }
 
 .row > *:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 
-input, textarea {
-  width: 100%; /* Ensure inputs take full width */
-  padding: 10px; /* More padding for better readability */
-  border: 1px solid #ccc;
-  border-radius: 5px; /* Slightly rounded borders */
-  font-size: 16px; /* Larger font size for easier reading */
+input,
+textarea {
+    width: 100%; /* Ensure inputs take full width */
+    padding: 10px; /* More padding for better readability */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Slightly rounded borders */
+    font-size: 16px; /* Larger font size for easier reading */
 }
 
 textarea {
-  height: 200px; /* Increase height for better text area size */
+    height: 200px; /* Increase height for better text area size */
 }
 
 .skill-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px; /* More space between skill rows */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* More space between skill rows */
 }
 
 .skill-row > * {
-  margin-right: 15px; /* Increase space between skill elements */
+    margin-right: 15px; /* Increase space between skill elements */
 }
 
 /* Grace System Section Styles */
 .god {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px; /* Space between each god */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space between each god */
 }
 
 .god h3 {
-  flex: 1; /* Ensures the god name takes up the left space */
-  font-size: 18px;
-  margin-right: 10px; /* Space between the god's name and the radio buttons */
+    flex: 1; /* Ensures the god name takes up the left space */
+    font-size: 18px;
+    margin-right: 10px; /* Space between the god's name and the radio buttons */
 }
 
 .choices {
-  display: flex;
-  justify-content: flex-start; /* Align radio buttons left */
-  gap: 10px; /* Space between radio buttons */
+    display: flex;
+    justify-content: flex-start; /* Align radio buttons left */
+    gap: 10px; /* Space between radio buttons */
 }
 
 .choices label {
-  margin-right: 10px; /* Space between radio button labels */
-  font-size: 14px; /* Adjust font size for labels */
+    margin-right: 10px; /* Space between radio button labels */
+    font-size: 14px; /* Adjust font size for labels */
 }
 
 .choices input {
-  margin-right: 5px; /* Space between radio buttons and text */
+    margin-right: 5px; /* Space between radio buttons and text */
 }
 .print-button {
-  text-align: center; /* Center the button */
-  margin-top: 30px; /* Space above the button */
+    text-align: center; /* Center the button */
+    margin-top: 30px; /* Space above the button */
 }
 
 .print-button button {
-  padding: 15px 30px; /* Larger padding for a more prominent button */
-  background-color: #8b0000; /* Dark red like blood or battle banners */
-  color: #fff;
-  border: 3px solid #ccc; /* Dark border for an aged look */
-  border-radius: 10px; /* Round edges for a more scroll-like feel */
-  font-size: 18px; /* Slightly larger text for readability */
-  font-family: 'Cinzel', serif; /* A more medieval font (use Google Fonts) */
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a cool shadow for depth */
-  text-transform: uppercase; /* Makes it feel more epic */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+    padding: 15px 30px; /* Larger padding for a more prominent button */
+    background-color: #8b0000; /* Dark red like blood or battle banners */
+    color: #fff;
+    border: 3px solid #ccc; /* Dark border for an aged look */
+    border-radius: 10px; /* Round edges for a more scroll-like feel */
+    font-size: 18px; /* Slightly larger text for readability */
+    font-family: "Cinzel", serif; /* A more medieval font (use Google Fonts) */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a cool shadow for depth */
+    text-transform: uppercase; /* Makes it feel more epic */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .print-button button:hover {
-  background-color: #a52a2a; /* Lighter red on hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
-  transform: scale(1.1); /* Slightly enlarge the button when hovered */
+    background-color: #a52a2a; /* Lighter red on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+    transform: scale(1.1); /* Slightly enlarge the button when hovered */
 }
 
 .print-button button:active {
-  background-color: #8b0000; /* Back to original color when clicked */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow back to original */
-  transform: scale(1); /* Return to original size after click */
+    background-color: #8b0000; /* Back to original color when clicked */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow back to original */
+    transform: scale(1); /* Return to original size after click */
 }
 
 .print-button button:focus {
-  outline: none; /* Remove focus outline */
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing focus effect */
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing focus effect */
 }
 /* Style for range sliders */
 input[type="range"] {
-  -webkit-appearance: none;  /* Removes the default styling in WebKit browsers like Chrome/Safari */
-  appearance: none;          /* Ensures consistent styling across all browsers */
-  width: 100%;               /* Makes the slider span the full width of its container */
-  height: 8px;               /* Height of the track */
-  background: #ddd;          /* Light gray color for the entire track */
-  border-radius: 5px;        /* Rounded corners for the track */
-  /* Add any other styles here for the track */
+    -webkit-appearance: none; /* Removes the default styling in WebKit browsers like Chrome/Safari */
+    appearance: none; /* Ensures consistent styling across all browsers */
+    width: 100%; /* Makes the slider span the full width of its container */
+    height: 8px; /* Height of the track */
+    background: #ddd; /* Light gray color for the entire track */
+    border-radius: 5px; /* Rounded corners for the track */
+    /* Add any other styles here for the track */
 }
 
 /* Style for range sliders */
 input[type="range"] {
-  -webkit-appearance: none;  /* Removes the default styling in WebKit browsers like Chrome/Safari */
-  appearance: none;          /* Ensures consistent styling across all browsers */
-  width: 100%;               /* Makes the slider span the full width of its container */
-  height: 8px;               /* Height of the track */
-  background: #fff;          /* White background for the entire track */
-  border-radius: 5px;        /* Rounded corners for the track */
-  position: relative;        /* Ensure the slider is positioned correctly */
+    -webkit-appearance: none; /* Removes the default styling in WebKit browsers like Chrome/Safari */
+    appearance: none; /* Ensures consistent styling across all browsers */
+    width: 100%; /* Makes the slider span the full width of its container */
+    height: 8px; /* Height of the track */
+    background: #fff; /* White background for the entire track */
+    border-radius: 5px; /* Rounded corners for the track */
+    position: relative; /* Ensure the slider is positioned correctly */
 }
 
 /* Style for the portion of the track before the thumb (left side of the slider) */
 input[type="range"]::-webkit-slider-runnable-track {
-  background: #ddd;          /* Light gray color for the entire track */
-  height: 8px;
-  border-radius: 5px;
+    background: #ddd; /* Light gray color for the entire track */
+    height: 8px;
+    border-radius: 5px;
 }
 
 /* Style for the portion of the track after the thumb (right side of the slider) */
 input[type="range"]::-webkit-slider-runnable-track:after {
-  content: '';               /* Empty content */
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 8px;
-  width: 100%;               /* Full width of the track */
-  background: white;         /* White background for the track after the thumb */
+    content: ""; /* Empty content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    width: 100%; /* Full width of the track */
+    background: white; /* White background for the track after the thumb */
 }
 
 /* Change the slider thumb (dot) color */
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;  /* Removes the default thumb style */
-  appearance: none;          /* Ensures consistent styling */
-  width: 20px;               /* Thumb width */
-  height: 20px;              /* Thumb height */
-  border-radius: 50%;        /* Makes the thumb circular */
-  background: #8b0000;       /* Red color for the thumb */
-  border: 2px solid #fff;    /* Optional: adds a white border around the thumb */
-  margin-top: -6px;          /* Adjusts thumb positioning (needed for Webkit) */
+    -webkit-appearance: none; /* Removes the default thumb style */
+    appearance: none; /* Ensures consistent styling */
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    border-radius: 50%; /* Makes the thumb circular */
+    background: #8b0000; /* Red color for the thumb */
+    border: 2px solid #fff; /* Optional: adds a white border around the thumb */
+    margin-top: -6px; /* Adjusts thumb positioning (needed for Webkit) */
 }
 
 /* Firefox styling for the range input */
 input[type="range"]::-moz-range-track {
-  background: #ddd;          /* Neutral color for the track in Firefox */
-  height: 8px;
-  border-radius: 5px;
+    background: #ddd; /* Neutral color for the track in Firefox */
+    height: 8px;
+    border-radius: 5px;
 }
 
 input[type="range"]::-moz-range-thumb {
-  width: 20px;               /* Thumb width */
-  height: 20px;              /* Thumb height */
-  border-radius: 50%;        /* Makes the thumb circular */
-  background: #8b0000;       /* Red color for the thumb */
-  border: 2px solid #fff;    /* Optional: adds a white border around the thumb */
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    border-radius: 50%; /* Makes the thumb circular */
+    background: #8b0000; /* Red color for the thumb */
+    border: 2px solid #fff; /* Optional: adds a white border around the thumb */
 }
 
 /* For the track when the thumb is moved to the left */
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: white;         /* Make the track white when focused */
+    background: white; /* Make the track white when focused */
 }
 /* Add this at the end of your CSS file */
 textarea[placeholder="Saving Throws"] {
-  height: 20px; /* Reduce height to half (from 200px to 100px) */
+    height: 20px; /* Reduce height to half (from 200px to 100px) */
 }
 /* Adjust the label's position using margin */
 .death-saving-label {
-  width: 100%;
-  display: flex;
-  justify-content: left; /* Align the label to the left */
-  text-align: left; /* Align text to the left */
+    width: 100%;
+    display: flex;
+    justify-content: left; /* Align the label to the left */
+    text-align: left; /* Align text to the left */
 
-  /* Margin adjustments to control label position */
-  margin-left: 110px; /* Adjust this to tweak label's position */
-  
-  /* Customizable font family and size */
-  font-family: var(--death-save-label-font, Arial, sans-serif); /* Custom font */
-  font-size: var(--death-save-label-font-size, 14px); /* Custom font size */
-  
-  /* Optional underline */
-  text-decoration: var(--death-save-label-decoration, underline); /* Set to 'underline' if desired */
+    /* Margin adjustments to control label position */
+    margin-left: 110px; /* Adjust this to tweak label's position */
+
+    /* Customizable font family and size */
+    font-family: var(
+        --death-save-label-font,
+        Arial,
+        sans-serif
+    ); /* Custom font */
+    font-size: var(--death-save-label-font-size, 14px); /* Custom font size */
+
+    /* Optional underline */
+    text-decoration: var(
+        --death-save-label-decoration,
+        underline
+    ); /* Set to 'underline' if desired */
 }
 /* General layout for death saving throws */
 .death-saving-throws {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /* Align the bubbles in a row for success and failure */
 .death-save {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Space between Successes and Failures */
-  font-size: var(--death-save-font-size, 14px); /* Allows font size to be customized via CSS variable */
-  font-family: var(--death-save-font-family, Arial, sans-serif); /* Customizable font family */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between Successes and Failures */
+    font-size: var(
+        --death-save-font-size,
+        14px
+    ); /* Allows font size to be customized via CSS variable */
+    font-family: var(
+        --death-save-font-family,
+        Arial,
+        sans-serif
+    ); /* Customizable font family */
 }
 
 /* Each section (Successes/Failures) will have its own box */
 .death-save-section {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 /* Bubbles for Successes and Failures */
 .bubbles {
-  display: flex;
-  gap: 3px; /* Adjust gap between bubbles */
+    display: flex;
+    gap: 3px; /* Adjust gap between bubbles */
 }
 
 /* Customizable bubbles for Successes and Failures */
 .death-save-circle {
-  width: var(--death-save-circle-size, 20px); /* Customize circle size via CSS variable */
-  height: var(--death-save-circle-size, 20px); /* Customize circle size via CSS variable */
-  border-radius: 50%;
-  background-color: #ccc; /* Default color for the bubbles */
-  border: none;
+    width: var(
+        --death-save-circle-size,
+        20px
+    ); /* Customize circle size via CSS variable */
+    height: var(
+        --death-save-circle-size,
+        20px
+    ); /* Customize circle size via CSS variable */
+    border-radius: 50%;
+    background-color: #ccc; /* Default color for the bubbles */
+    border: none;
 }
 /* Ensure the container has relative positioning */
 .input-container {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 /* Style for the fixed text */
 .fixed-text {
-  position: absolute;
-  left: 10px; /* Adjust based on desired spacing */
-  top: 50%;
-  transform: translateY(-50%);
-  color: #888;
-  pointer-events: none; /* Ensures this text is unclickable */
-  font-size: 16px; /* Match the input text size */
-  z-index: 1; /* Ensure the fixed text appears above the input text */
+    position: absolute;
+    left: 10px; /* Adjust based on desired spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none; /* Ensures this text is unclickable */
+    font-size: 16px; /* Match the input text size */
+    z-index: 1; /* Ensure the fixed text appears above the input text */
 }
 
 /* Input styling */
 .input-with-fixed-text {
-  padding-left: 150px; /* Creates space to start typing to the right of the fixed text */
-  width: 100%;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  position: relative;
-  background-color: transparent;
-  z-index: 0; /* Keeps text behind fixed placeholder */
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
+    padding-left: 150px; /* Creates space to start typing to the right of the fixed text */
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    background-color: transparent;
+    z-index: 0; /* Keeps text behind fixed placeholder */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 /* Extremely specific targeting for Saving Throws only */
 .saving-throws {
-  position: relative; /* To position the label relative to the input */
-  width: 100%; /* Ensure the full width is used for the input container */
+    position: relative; /* To position the label relative to the input */
+    width: 100%; /* Ensure the full width is used for the input container */
 }
 
 /* The fixed label inside the container */
 .saving-throws .fixed-text {
-  position: absolute;
-  left: 10px; /* Adjust the label's position to the left */
-  top: 50%;
-  transform: translateY(-50%); /* Vertically center the label */
-  color: #888; /* Placeholder-like gray color */
-  font-size: 16px; /* Font size to match input */
-  pointer-events: none; /* Make the label unclickable */
-  transition: opacity 0.2s ease; /* Smooth transition for opacity */
+    position: absolute;
+    left: 10px; /* Adjust the label's position to the left */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the label */
+    color: #888; /* Placeholder-like gray color */
+    font-size: 16px; /* Font size to match input */
+    pointer-events: none; /* Make the label unclickable */
+    transition: opacity 0.2s ease; /* Smooth transition for opacity */
 }
 
 /* The textarea with the fixed label */
 .saving-throws textarea {
-  width: calc(100% - 180px); /* Narrow the width by 40px */
-  padding-left: 150px; /* Keep the space for the fixed label */
-  padding-top: 10px; /* Add padding to avoid text overlap with the label */
-  background-color: transparent;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: normal;
-  color: #333; /* Text color remains the same */
-  position: relative; /* Keeps the label above the textarea */
-  z-index: 1; /* Ensure the text appears above the label */
+    width: calc(100% - 180px); /* Narrow the width by 40px */
+    padding-left: 150px; /* Keep the space for the fixed label */
+    padding-top: 10px; /* Add padding to avoid text overlap with the label */
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333; /* Text color remains the same */
+    position: relative; /* Keeps the label above the textarea */
+    z-index: 1; /* Ensure the text appears above the label */
 }
 
 /* When typing in the textarea, the placeholder 'Saving Throws' remains visible */
 .saving-throws textarea::placeholder {
-  opacity: 0; /* Hide the placeholder when typing */
+    opacity: 0; /* Hide the placeholder when typing */
 }
 
 .saving-throws textarea:focus::placeholder {
-  opacity: 0; /* Ensure placeholder is hidden on focus */
+    opacity: 0; /* Ensure placeholder is hidden on focus */
 }
 
 /* When typing or focusing on the textarea, the label should disappear */
 .saving-throws textarea:not(:placeholder-shown) + .fixed-text,
 .saving-throws textarea:focus + .fixed-text {
-  opacity: 0; /* Hide the label when typing or focused */
+    opacity: 0; /* Hide the label when typing or focused */
 }
 /* Adjust height of the 'Weapons and Damage/Type' textarea */
 textarea[placeholder="Weapons and Damage/Type"] {
-  height: 150px; /* Set the height of the textarea */
+    height: 150px; /* Set the height of the textarea */
 }
 
 /* Adjust height of the 'Equipment' textarea */
 textarea[placeholder="Equipment"] {
-  height: 150px; /* Set the height of the textarea */
+    height: 150px; /* Set the height of the textarea */
 }
 
 /* Adjust height of the 'Weapons Proficiencies' textarea */
 textarea[placeholder="Weapon Proficiencies"] {
-  height: 80px; /* Set the height of the textarea */
+    height: 80px; /* Set the height of the textarea */
 }
 
 /* Adjust height of the 'Other Proficiencies' textarea */
 textarea[placeholder="Other Proficiencies"] {
-  height: 80px; /* Set the height of the textarea */
+    height: 80px; /* Set the height of the textarea */
 }
