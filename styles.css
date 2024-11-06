@@ -1,182 +1,138 @@
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: #f0e6d2;
+  color: #333;
+  padding: 20px;
+  margin: 0;
 }
 
 .container {
-    max-width: 8.5in;
-    min-width: 8.5in;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+  width: 100%; /* Full width for the container */
+  max-width: 8.5in; /* Match Website 1's width */
+  min-width: 8.5in; /* Ensure it doesn't shrink below the desired width */
+  margin: 0 auto; /* Center the container */
+  background-color: #fff;
+  padding: 30px; /* Increased padding for better spacing */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+h1 {
+  text-align: center;
+  color: #8b0000;
+  margin-bottom: 30px; /* Increased space below heading */
+  font-size: 28px; /* Larger heading size */
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
+.section {
+  margin-bottom: 30px; /* More space between sections */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
 }
 
-label {
-    font-size: 1em;
-    display: block;
-    margin: 5px 0;
+.section h2 {
+  color: #8b0000;
+  margin-bottom: 15px; /* Space between the heading and content */
+  font-size: 20px; /* Slightly bigger section title */
 }
 
-input[type="text"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.row {
+  display: flex;
+  margin-bottom: 15px; /* More space between rows */
+}
+
+.row > * {
+  flex: 1;
+  margin-right: 15px; /* Increase space between flexed items */
+}
+
+.row > *:last-child {
+  margin-right: 0;
+}
+
+input, textarea {
+  width: 100%; /* Ensure inputs take full width */
+  padding: 10px; /* More padding for better readability */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Slightly rounded borders */
+  font-size: 16px; /* Larger font size for easier reading */
 }
 
 textarea {
-    height: 100px;
-    resize: vertical;
+  height: 200px; /* Increase height for better text area size */
 }
 
-.info-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 20px;
+.skill-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* More space between skill rows */
 }
 
-.info-row div {
-    flex: 1;
+.skill-row > * {
+  margin-right: 15px; /* Increase space between skill elements */
 }
 
-.ac-icon, .hero-points, .gold-icon {
-    display: inline-block;
-    width: 30%;
+/* Grace System Section Styles */
+.god {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Space between each god */
 }
 
-/* Skills Section Styling */
-.skills {
-    margin: 20px;
+.god h3 {
+  flex: 1; /* Ensures the god name takes up the left space */
+  font-size: 18px;
+  margin-right: 10px; /* Space between the god's name and the radio buttons */
 }
 
-.skills h2 {
-    text-align: left;
-    font-size: 1.5em;
-    margin-bottom: 20px;
+.choices {
+  display: flex;
+  justify-content: flex-start; /* Align radio buttons left */
+  gap: 10px; /* Space between radio buttons */
 }
 
-.skills-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.choices label {
+  margin-right: 10px; /* Space between radio button labels */
+  font-size: 14px; /* Adjust font size for labels */
 }
 
-/* Styling each skill block */
-.skill {
-    width: 18%; /* Adjusted for five columns per row */
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    text-align: center;
+.choices input {
+  margin-right: 5px; /* Space between radio buttons and text */
+}
+.print-button {
+  text-align: center; /* Center the button */
+  margin-top: 30px; /* Space above the button */
 }
 
-/* Label styling */
-.skill label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
+.print-button button {
+  padding: 15px 30px; /* Larger padding for a more prominent button */
+  background-color: #8b0000; /* Dark red like blood or battle banners */
+  color: #fff;
+  border: 3px solid #ccc; /* Dark border for an aged look */
+  border-radius: 10px; /* Round edges for a more scroll-like feel */
+  font-size: 18px; /* Slightly larger text for readability */
+  font-family: 'Cinzel', serif; /* A more medieval font (use Google Fonts) */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a cool shadow for depth */
+  text-transform: uppercase; /* Makes it feel more epic */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Input field styling */
-.skill input[type="text"] {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 5px;
+.print-button button:hover {
+  background-color: #a52a2a; /* Lighter red on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+  transform: scale(1.1); /* Slightly enlarge the button when hovered */
 }
 
-/* Skill score and modifier styling */
-.skill input[id$="-score"] {
-    width: 50px; /* Slightly wider for the skill score */
+.print-button button:active {
+  background-color: #8b0000; /* Back to original color when clicked */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow back to original */
+  transform: scale(1); /* Return to original size after click */
 }
 
-.skill input[id$="-modifier"] {
-    width: 50px; /* Same width for the modifier */
-}
-
-/* Placeholder text styling */
-.skill input::placeholder {
-    color: #888;
-    font-size: 0.9em;
-}
-
-/* Print-specific styles */
-@media print {
-    /* Hide the print button */
-    .print-btn {
-        display: none;
-    }
-
-    /* Ensure the page layout is adjusted for printing */
-    body {
-        margin: 0;
-        padding: 0;
-        font-size: 12pt;
-    }
-
-    .container {
-        max-width: 100%;
-        min-width: 100%;
-        padding: 10px;
-        background-color: #fff;
-        border: none;
-    }
-
-    /* Style adjustments for each section */
-    header h1 {
-        text-align: center;
-        font-size: 1.8em;
-        margin-bottom: 20px;
-    }
-
-    h2 {
-        font-size: 1.3em;
-        margin-bottom: 15px;
-        color: #333;
-    }
-
-    .info-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 15px;
-    }
-
-    .info-row div {
-        flex: 1;
-    }
-
-    /* Adjust inputs to be more compact for printing */
-    input[type="text"] {
-        width: 100%;
-        padding: 5px;
-        font-size: 10pt;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    .ac-icon, .hero-points, .gold-icon {
-        width: 30%;
-        text-align: center;
-    }
+.print-button button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing focus effect */
 }
