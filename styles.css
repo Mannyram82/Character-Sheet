@@ -211,7 +211,24 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 textarea[placeholder="Saving Throws"] {
   height: 20px; /* Reduce height to half (from 200px to 100px) */
 }
-/* Ensures a better layout for the death save section */
+/* Adjust the label's position using margin */
+.death-saving-label {
+  width: 100%;
+  display: flex;
+  justify-content: left; /* Align the label to the left */
+  text-align: left; /* Align text to the left */
+
+  /* Margin adjustments to control label position */
+  margin-left: 110px; /* Adjust this to tweak label's position */
+  
+  /* Customizable font family and size */
+  font-family: var(--death-save-label-font, Arial, sans-serif); /* Custom font */
+  font-size: var(--death-save-label-font-size, 14px); /* Custom font size */
+  
+  /* Optional underline */
+  text-decoration: var(--death-save-label-decoration, underline); /* Set to 'underline' if desired */
+}
+/* General layout for death saving throws */
 .death-saving-throws {
   display: flex;
   flex-direction: column;
@@ -222,16 +239,124 @@ textarea[placeholder="Saving Throws"] {
 .death-save {
   display: flex;
   align-items: center;
-  margin-bottom: 10px; /* Space between Successes and Failures */
+  gap: 10px; /* Space between Successes and Failures */
+  font-size: var(--death-save-font-size, 14px); /* Allows font size to be customized via CSS variable */
+  font-family: var(--death-save-font-family, Arial, sans-serif); /* Customizable font family */
 }
 
-/* Space out the bubbles for success/failure */
-.death-save input[type="radio"] {
-  margin-right: 50px; /* Adjust the space between bubbles */
+/* Each section (Successes/Failures) will have its own box */
+.death-save-section {
+  display: flex;
+  align-items: center;
 }
 
-/* Labels for successes and failures */
-.death-save span {
-  margin-left: 10px; /* Space the label from the radio buttons */
-  font-size: 14px; /* Adjust text size */
+/* Bubbles for Successes and Failures */
+.bubbles {
+  display: flex;
+  gap: 3px; /* Adjust gap between bubbles */
+}
+
+/* Customizable bubbles for Successes and Failures */
+.death-save-circle {
+  width: var(--death-save-circle-size, 20px); /* Customize circle size via CSS variable */
+  height: var(--death-save-circle-size, 20px); /* Customize circle size via CSS variable */
+  border-radius: 50%;
+  background-color: #ccc; /* Default color for the bubbles */
+  border: none;
+}
+/* Ensure the container has relative positioning */
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Style for the fixed text */
+.fixed-text {
+  position: absolute;
+  left: 10px; /* Adjust based on desired spacing */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none; /* Ensures this text is unclickable */
+  font-size: 16px; /* Match the input text size */
+  z-index: 1; /* Ensure the fixed text appears above the input text */
+}
+
+/* Input styling */
+.input-with-fixed-text {
+  padding-left: 150px; /* Creates space to start typing to the right of the fixed text */
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  background-color: transparent;
+  z-index: 0; /* Keeps text behind fixed placeholder */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+/* Extremely specific targeting for Saving Throws only */
+.saving-throws {
+  position: relative; /* To position the label relative to the input */
+  width: 100%; /* Ensure the full width is used for the input container */
+}
+
+/* The fixed label inside the container */
+.saving-throws .fixed-text {
+  position: absolute;
+  left: 10px; /* Adjust the label's position to the left */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the label */
+  color: #888; /* Placeholder-like gray color */
+  font-size: 16px; /* Font size to match input */
+  pointer-events: none; /* Make the label unclickable */
+  transition: opacity 0.2s ease; /* Smooth transition for opacity */
+}
+
+/* The textarea with the fixed label */
+.saving-throws textarea {
+  width: calc(100% - 180px); /* Narrow the width by 40px */
+  padding-left: 150px; /* Keep the space for the fixed label */
+  padding-top: 10px; /* Add padding to avoid text overlap with the label */
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333; /* Text color remains the same */
+  position: relative; /* Keeps the label above the textarea */
+  z-index: 1; /* Ensure the text appears above the label */
+}
+
+/* When typing in the textarea, the placeholder 'Saving Throws' remains visible */
+.saving-throws textarea::placeholder {
+  opacity: 0; /* Hide the placeholder when typing */
+}
+
+.saving-throws textarea:focus::placeholder {
+  opacity: 0; /* Ensure placeholder is hidden on focus */
+}
+
+/* When typing or focusing on the textarea, the label should disappear */
+.saving-throws textarea:not(:placeholder-shown) + .fixed-text,
+.saving-throws textarea:focus + .fixed-text {
+  opacity: 0; /* Hide the label when typing or focused */
+}
+/* Adjust height of the 'Weapons and Damage/Type' textarea */
+textarea[placeholder="Weapons and Damage/Type"] {
+  height: 150px; /* Set the height of the textarea */
+}
+
+/* Adjust height of the 'Equipment' textarea */
+textarea[placeholder="Equipment"] {
+  height: 150px; /* Set the height of the textarea */
+}
+
+/* Adjust height of the 'Weapons Proficiencies' textarea */
+textarea[placeholder="Weapon Proficiencies"] {
+  height: 80px; /* Set the height of the textarea */
+}
+
+/* Adjust height of the 'Other Proficiencies' textarea */
+textarea[placeholder="Other Proficiencies"] {
+  height: 80px; /* Set the height of the textarea */
 }
