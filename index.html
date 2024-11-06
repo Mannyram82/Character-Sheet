@@ -34,12 +34,33 @@
       <div class="row">
         <input type="number" placeholder="HP" />
         <input type="text" placeholder="Hit Die" />
-        <input type="text" placeholder="Death Saves" />
+        <input type="text" placeholder="Eldcricon" />
       </div>
       <div class="row">
-        <textarea placeholder="Saving Throws"></textarea>
-      </div>
+  <!-- Saving Throws Textarea (taking half the width) -->
+  <textarea placeholder="Saving Throws"></textarea>
+
+  <!-- Death Saving Throws Section -->
+  <div class="death-saving-throws">
+    <label>Death Saving Throws</label>
+
+    <!-- Successes Section with 3 bubbles -->
+    <div class="death-save">
+      <input type="radio" name="death-save-success" class="death-save-circle" id="success1">
+      <input type="radio" name="death-save-success" class="death-save-circle" id="success2">
+      <input type="radio" name="death-save-success" class="death-save-circle" id="success3">
+      <span>Successes</span>
     </div>
+
+    <!-- Failures Section with 3 bubbles -->
+    <div class="death-save">
+      <input type="radio" name="death-save-failure" class="death-save-circle" id="failure1">
+      <input type="radio" name="death-save-failure" class="death-save-circle" id="failure2">
+      <input type="radio" name="death-save-failure" class="death-save-circle" id="failure3">
+      <span>Failures</span>
+    </div>
+  </div>
+</div>
     <div class="section">
       <h2>Skills</h2>
       <div class="skill-row">
