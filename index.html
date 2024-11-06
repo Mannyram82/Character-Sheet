@@ -1,251 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahelia Character Creation</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahelia Character Sheet</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Sahelia Character Creation</h1>
-        </header>
-        
-        <section class="general-info">
-    <h2>General Information</h2>
-    <div class="info-row">
-        <div><label for="name">Character Name:</label><input type="text" id="name" /></div>
-        <div><label for="age">Age:</label><input type="text" id="age" /></div>
-        <div><label for="height">Height:</label><input type="text" id="height" /></div>
-        <div><label for="weight">Weight:</label><input type="text" id="weight" /></div>
+  <div class="container">
+    <h1>Sahelia Character Sheet</h1>
+    <div class="section">
+      <h2>Character Details</h2>
+      <div class="row">
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Class and Subclass" />
+        <input type="number" placeholder="Level" />
+      </div>
+      <div class="row">
+        <input type="text" placeholder="Race" />
+        <input type="text" placeholder="Background" />
+        <input type="text" placeholder="Languages" />
+      </div>
+      <div class="row">
+        <input type="text" placeholder="Kingdom of Origin" />
+        <input type="number" placeholder="Armor Class" />
+        <input type="number" placeholder="Initiative Bonus" />
+      </div>
+      <div class="row">
+        <input type="number" placeholder="Proficiency Bonus" />
+        <input type="number" placeholder="Speed" />
+        <input type="number" placeholder="Hero Points" />
+      </div>
+      <div class="row">
+        <input type="number" placeholder="HP" />
+        <input type="text" placeholder="Hit Die" />
+        <input type="text" placeholder="Death Saves" />
+      </div>
+      <div class="row">
+        <textarea placeholder="Saving Throws"></textarea>
+      </div>
     </div>
-    <div class="info-row">
-        <div><label for="race">Race:</label><input type="text" id="race" /></div>
-        <div><label for="class">Class:</label><input type="text" id="class" /></div>
-        <div><label for="speed">Movement Speed:</label><input type="text" id="speed" /></div>
-        <div><label for="background">Background:</label><input type="text" id="background" /></div>
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="skill-row">
+        <span>Might:</span>
+        <input type="text" placeholder="Proficiency" />
+        <input type="text" placeholder="Score" />
+        <input type="text" placeholder="Modifier" />
+      </div>
+      <div class="row">
+        <textarea placeholder="Other Proficiencies"></textarea>
+      </div>
     </div>
-    <div class="info-row">
-        <div class="ac-icon"><label for="ac">Armor Class (AC):</label><input type="text" id="ac" /></div>
-        <div class="hero-points"><label for="hero-points">Hero Points:</label><input type="text" id="hero-points" /></div>
-        <div class="gold-icon"><label for="gold">Gold:</label><input type="text" id="gold" /></div>
+    <div class="section">
+      <h2>Weapons and Equipment</h2>
+      <div class="row">
+        <textarea placeholder="Weapons and Damage/Type"></textarea>
+        <textarea placeholder="Equipment"></textarea>
+      </div>
+      <div class="row">
+        <textarea placeholder="Feats and Benefits (Racial, Class, Background)"></textarea>
+      </div>
     </div>
-    <div class="info-row">
-        <div><label for="hp">HP:</label><input type="text" id="hp" /></div>
-        <div><label for="max-hp">Max HP:</label><input type="text" id="max-hp" /></div>
-        <div><label for="proficiency-bonus">Proficiency Bonus:</label><input type="text" id="proficiency-bonus" /></div>
+    <div class="section">
+      <h2>Spellcasting</h2>
+      <div class="row">
+        <input type="number" placeholder="Mana" />
+        <input type="number" placeholder="Spells Known" />
+        <input type="number" placeholder="Spellsave DC" />
+        <input type="number" placeholder="Spellcasting Modifier" />
+      </div>
+      <div class="row">
+        <textarea placeholder="Spells"></textarea>
+        <textarea placeholder="Magical Components"></textarea>
+      </div>
+      <div class="row">
+        <input type="number" placeholder="Time Spent Crafting Spell" />
+      </div>
     </div>
+    <!-- Grace System Section -->
+<div class="section">
+  <h2>Grace System</h2>
+  
+  <!-- Kothar -->
+  <div class="god">
+    <h3>Kothar</h3>
+    <div class="choices">
+      <label>
+        <input type="radio" name="kothar" value="chosen"> Chosen
+      </label>
+      <label>
+        <input type="radio" name="kothar" value="blessed"> Blessed
+      </label>
+      <label>
+        <input type="radio" name="kothar" value="neutral"> Neutral
+      </label>
+      <label>
+        <input type="radio" name="kothar" value="strayed"> Strayed
+      </label>
+      <label>
+        <input type="radio" name="kothar" value="forsaken"> Forsaken
+      </label>
+    </div>
+  </div>
 
-    <!-- Save Proficiencies Section -->
-    <div class="info-row">
-        <div>
-            <label for="save-proficiencies">Save Proficiencies:</label>
-           <div class="save-proficiencies">
-    <label><input type="checkbox" id="save-might"> Might</label>
-    <label><input type="checkbox" id="save-sorcery"> Sorcery</label>
-    <label><input type="checkbox" id="save-sneak"> Sneak</label>
-    <label><input type="checkbox" id="save-mind"> Mind</label>
-    <label><input type="checkbox" id="save-charm"> Charm</label>
-    <label><input type="checkbox" id="save-awareness"> Awareness</label>
-    <label><input type="checkbox" id="save-healing"> Healing</label>
-    <label><input type="checkbox" id="save-wilderness"> Wilderness</label>
-    <label><input type="checkbox" id="save-nimbleness"> Nimbleness</label>
-    <label><input type="checkbox" id="save-artistry"> Artistry</label>
+  <!-- Eramé -->
+  <div class="god">
+    <h3>Eramé</h3>
+    <div class="choices">
+      <label>
+        <input type="radio" name="erame" value="chosen"> Chosen
+      </label>
+      <label>
+        <input type="radio" name="erame" value="blessed"> Blessed
+      </label>
+      <label>
+        <input type="radio" name="erame" value="neutral"> Neutral
+      </label>
+      <label>
+        <input type="radio" name="erame" value="strayed"> Strayed
+      </label>
+      <label>
+        <input type="radio" name="erame" value="forsaken"> Forsaken
+      </label>
+    </div>
+  </div>
+
+  <!-- Morvath -->
+  <div class="god">
+    <h3>Morvath</h3>
+    <div class="choices">
+      <label>
+        <input type="radio" name="morvath" value="chosen"> Chosen
+      </label>
+      <label>
+        <input type="radio" name="morvath" value="blessed"> Blessed
+      </label>
+      <label>
+        <input type="radio" name="morvath" value="neutral"> Neutral
+      </label>
+      <label>
+        <input type="radio" name="morvath" value="strayed"> Strayed
+      </label>
+      <label>
+        <input type="radio" name="morvath" value="forsaken"> Forsaken
+      </label>
+    </div>
+  </div>
+
+  <!-- Kalara -->
+  <div class="god">
+    <h3>Kalara</h3>
+    <div class="choices">
+      <label>
+        <input type="radio" name="kalara" value="chosen"> Chosen
+      </label>
+      <label>
+        <input type="radio" name="kalara" value="blessed"> Blessed
+      </label>
+      <label>
+        <input type="radio" name="kalara" value="neutral"> Neutral
+      </label>
+      <label>
+        <input type="radio" name="kalara" value="strayed"> Strayed
+      </label>
+      <label>
+        <input type="radio" name="kalara" value="forsaken"> Forsaken
+      </label>
+    </div>
+  </div>
+
+  <!-- Balorin -->
+  <div class="god">
+    <h3>Balorin</h3>
+    <div class="choices">
+      <label>
+        <input type="radio" name="balorin" value="chosen"> Chosen
+      </label>
+      <label>
+        <input type="radio" name="balorin" value="blessed"> Blessed
+      </label>
+      <label>
+        <input type="radio" name="balorin" value="neutral"> Neutral
+      </label>
+      <label>
+        <input type="radio" name="balorin" value="strayed"> Strayed
+      </label>
+      <label>
+        <input type="radio" name="balorin" value="forsaken"> Forsaken
+      </label>
+    </div>
+  </div>
+
+  <!-- Illyandra -->
+  <div class="god">
+    <h3>Illyandra</h3>
+    <div class="choices">
+      <label>
+        <input type="radio" name="illyandra" value="chosen"> Chosen
+      </label>
+      <label>
+        <input type="radio" name="illyandra" value="blessed"> Blessed
+      </label>
+      <label>
+        <input type="radio" name="illyandra" value="neutral"> Neutral
+      </label>
+      <label>
+        <input type="radio" name="illyandra" value="strayed"> Strayed
+      </label>
+      <label>
+        <input type="radio" name="illyandra" value="forsaken"> Forsaken
+      </label>
+    </div>
+  </div>
+
+  <!-- Garrick -->
+  <div class="god">
+    <h3>Garrick</h3>
+    <div class="choices">
+      <label>
+        <input type="radio" name="garrick" value="chosen"> Chosen
+      </label>
+      <label>
+        <input type="radio" name="garrick" value="blessed"> Blessed
+      </label>
+      <label>
+        <input type="radio" name="garrick" value="neutral"> Neutral
+      </label>
+      <label>
+        <input type="radio" name="garrick" value="strayed"> Strayed
+      </label>
+      <label>
+        <input type="radio" name="garrick" value="forsaken"> Forsaken
+      </label>
+    </div>
+  </div>
 </div>
-        </div>
-    </div>
-
-    <!-- Miscellaneous Proficiencies Section -->
-    <div class="info-row">
+    <div class="section">
+      <h2>Alignment Spectrums</h2>
+      <div class="alignment-row">
         <div>
-            <label for="miscellaneous-proficiencies">Miscellaneous Proficiencies:</label>
-            <textarea id="miscellaneous-proficiencies" placeholder="Enter your miscellaneous proficiencies here..."></textarea>
+          <label for="freedom-order">Freedom vs Order</label>
+          <input type="range" min="0" max="100" value="50" class="alignment-slider" id="freedom-order" />
         </div>
+        <div>
+          <label for="individualism-collectivism">Individualism vs Collectivism</label>
+          <input type="range" min="0" max="100" value="50" class="alignment-slider" id="individualism-collectivism" />
+        </div>
+        <div>
+          <label for="honesty-deceit">Honesty vs Deceit</label>
+          <input type="range" min="0" max="100" value="50" class="alignment-slider" id="honesty-deceit" />
+        </div>
+      </div>
     </div>
-</section>
-        
-      <section class="skills">
-    <h2>Skills</h2>
-    <div class="skills-row">
-        <div class="skill">
-            <label for="might">Might</label>
-            <input type="text" id="might-score" placeholder="Score" />
-            <input type="text" id="might-modifier" placeholder="Modifier" />
-        </div>
-        <div class="skill">
-            <label for="sorcery">Sorcery</label>
-            <input type="text" id="sorcery-score" placeholder="Score" />
-            <input type="text" id="sorcery-modifier" placeholder="Modifier" />
-        </div>
-        <div class="skill">
-            <label for="sneak">Sneak</label>
-            <input type="text" id="sneak-score" placeholder="Score" />
-            <input type="text" id="sneak-modifier" placeholder="Modifier" />
-        </div>
-        <div class="skill">
-            <label for="mind">Mind</label>
-            <input type="text" id="mind-score" placeholder="Score" />
-            <input type="text" id="mind-modifier" placeholder="Modifier" />
-        </div>
-        <div class="skill">
-            <label for="charm">Charm</label>
-            <input type="text" id="charm-score" placeholder="Score" />
-            <input type="text" id="charm-modifier" placeholder="Modifier" />
-        </div>
+    <div class="section">
+      <h2>Additional Information</h2>
+      <div class="row">
+        <textarea placeholder="Personality"></textarea>
+        <textarea placeholder="Backstory"></textarea>
+      </div>
+      <div class="row">
+        <textarea placeholder="Allies and Enemies"></textarea>
+        <textarea placeholder="Goals"></textarea>
+      </div>
+      <div class="row">
+        <textarea placeholder="Conditions Tracking"></textarea>
+        <textarea placeholder="Notes"></textarea>
+      </div>
+      <!-- Print Button -->
+<div class="print-button">
+  <button onclick="window.print()">Summon Your Character to the Page!</button>
+</div>
     </div>
-    <div class="skills-row">
-        <div class="skill">
-            <label for="awareness">Awareness</label>
-            <input type="text" id="awareness-score" placeholder="Score" />
-            <input type="text" id="awareness-modifier" placeholder="Modifier" />
-        </div>
-        <div class="skill">
-            <label for="healing">Healing</label>
-            <input type="text" id="healing-score" placeholder="Score" />
-            <input type="text" id="healing-modifier" placeholder="Modifier" />
-        </div>
-        <div class="skill">
-            <label for="wilderness">Wilderness</label>
-            <input type="text" id="wilderness-score" placeholder="Score" />
-            <input type="text" id="wilderness-modifier" placeholder="Modifier" />
-        </div>
-        <div class="skill">
-            <label for="nimbleness">Nimbleness</label>
-            <input type="text" id="nimbleness-score" placeholder="Score" />
-            <input type="text" id="nimbleness-modifier" placeholder="Modifier" />
-        </div>
-        <div class="skill">
-            <label for="artistry">Artistry</label>
-            <input type="text" id="artistry-score" placeholder="Score" />
-            <input type="text" id="artistry-modifier" placeholder="Modifier" />
-        </div>
-    </div>
-</section>
-        
-        <section class="feats-benefits">
-            <h2>Feats and Benefits</h2>
-            <div>
-                <label for="class-feats">Class Feats:</label><textarea id="class-feats"></textarea>
-                <label for="racial-feats">Racial Feats:</label><textarea id="racial-feats"></textarea>
-                <label for="background-benefits">Background Benefits:</label><textarea id="background-benefits"></textarea>
-            </div>
-        </section>
-        
-        <section class="spellcasting">
-            <h2>Spellcasting</h2>
-            <label for="cantrips">Number of Cantrips Known:</label><input type="text" id="cantrips" />
-            <label for="spells">Number of Spells Known:</label><input type="text" id="spells" />
-            <label for="mana">Mana:</label><input type="text" id="mana" />
-            <div>
-                <label for="spell-list">List of Spells and Cantrips:</label><textarea id="spell-list"></textarea>
-                <label for="magical-components">List of Magical Components:</label><textarea id="magical-components"></textarea>
-                <label for="spell-creation-time">Spell Creation Time:</label><input type="text" id="spell-creation-time" />
-            </div>
-        </section>
-
-        <section class="grace-system">
-    <h2>Grace System</h2>
-    <div>
-        <!-- Kothar -->
-        <label for="kothar">Kothar:</label>
-        <div class="alignment-options">
-            <input type="radio" name="kothar" value="chosen"> Chosen
-            <input type="radio" name="kothar" value="blessed"> Blessed
-            <input type="radio" name="kothar" value="neutral"> Neutral
-            <input type="radio" name="kothar" value="strayed"> Strayed
-            <input type="radio" name="kothar" value="forsaken"> Forsaken
-        </div>
-
-        <!-- Eramé -->
-        <label for="erame">Eramé:</label>
-        <div class="alignment-options">
-            <input type="radio" name="erame" value="chosen"> Chosen
-            <input type="radio" name="erame" value="blessed"> Blessed
-            <input type="radio" name="erame" value="neutral"> Neutral
-            <input type="radio" name="erame" value="strayed"> Strayed
-            <input type="radio" name="erame" value="forsaken"> Forsaken
-        </div>
-
-        <!-- Morvath -->
-        <label for="morvath">Morvath:</label>
-        <div class="alignment-options">
-            <input type="radio" name="morvath" value="chosen"> Chosen
-            <input type="radio" name="morvath" value="blessed"> Blessed
-            <input type="radio" name="morvath" value="neutral"> Neutral
-            <input type="radio" name="morvath" value="strayed"> Strayed
-            <input type="radio" name="morvath" value="forsaken"> Forsaken
-        </div>
-
-        <!-- Kalara -->
-        <label for="kalara">Kalara:</label>
-        <div class="alignment-options">
-            <input type="radio" name="kalara" value="chosen"> Chosen
-            <input type="radio" name="kalara" value="blessed"> Blessed
-            <input type="radio" name="kalara" value="neutral"> Neutral
-            <input type="radio" name="kalara" value="strayed"> Strayed
-            <input type="radio" name="kalara" value="forsaken"> Forsaken
-        </div>
-
-        <!-- Balorin -->
-        <label for="balorin">Balorin:</label>
-        <div class="alignment-options">
-            <input type="radio" name="balorin" value="chosen"> Chosen
-            <input type="radio" name="balorin" value="blessed"> Blessed
-            <input type="radio" name="balorin" value="neutral"> Neutral
-            <input type="radio" name="balorin" value="strayed"> Strayed
-            <input type="radio" name="balorin" value="forsaken"> Forsaken
-        </div>
-
-        <!-- Illyandra -->
-        <label for="illyandra">Illyandra:</label>
-        <div class="alignment-options">
-            <input type="radio" name="illyandra" value="chosen"> Chosen
-            <input type="radio" name="illyandra" value="blessed"> Blessed
-            <input type="radio" name="illyandra" value="neutral"> Neutral
-            <input type="radio" name="illyandra" value="strayed"> Strayed
-            <input type="radio" name="illyandra" value="forsaken"> Forsaken
-        </div>
-
-        <!-- Garrick -->
-        <label for="garrick">Garrick:</label>
-        <div class="alignment-options">
-            <input type="radio" name="garrick" value="chosen"> Chosen
-            <input type="radio" name="garrick" value="blessed"> Blessed
-            <input type="radio" name="garrick" value="neutral"> Neutral
-            <input type="radio" name="garrick" value="strayed"> Strayed
-            <input type="radio" name="garrick" value="forsaken"> Forsaken
-        </div>
-    </div>
-</section>
-
-        <section class="alignment">
-            <h2>Alignment</h2>
-            <div>
-                <label for="order-freedom">Order vs. Freedom</label>
-                <div class="spectrum">
-                    <input type="range" min="1" max="100" value="50" id="order-freedom">
-                </div>
-                <label for="individualism-collectivism">Individualism vs. Collectivism</label>
-                <div class="spectrum">
-                    <input type="range" min="1" max="100" value="50" id="individualism-collectivism">
-                </div>
-                <label for="honesty-deceit">Honesty vs. Deceit</label>
-                <div class="spectrum">
-                    <input type="range" min="1" max="100" value="50" id="honesty-deceit">
-                </div>
-            </div>
-        </section>
-
-        <section class="other-info">
-            <h2>Other Information</h2>
-            <label for="personality-traits">Personality Traits:</label><textarea id="personality-traits"></textarea>
-            <label for="backstory">Backstory Summary:</label><textarea id="backstory"></textarea>
-            <label for="allies-enemies">Allies and Enemies:</label><textarea id="allies-enemies"></textarea>
-            <label for="goals-aspirations">Goals and Aspirations:</label><textarea id="goals-aspirations"></textarea>
-            <label for="notes">Notes and Observations:</label><textarea id="notes"></textarea>
-        </section>
-    </div>
-    <button onclick="window.print()" class="print-btn">Print Character Sheet</button>
+  </div>
 </body>
 </html>
