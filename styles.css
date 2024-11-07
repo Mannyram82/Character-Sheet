@@ -364,12 +364,12 @@ textarea[placeholder="Saving Throws"] {
 }
 /* Adjust height of the 'Weapons and Damage/Type' textarea */
 textarea[placeholder="Weapons and Damage/Type"] {
-    height: 280px; /* Set the height of the textarea */
+    height: 230px; /* Set the height of the textarea */
 }
 
 /* Adjust height of the 'Equipment' textarea */
 textarea[placeholder="Equipment"] {
-    height: 280px; /* Set the height of the textarea */
+    height: 230px; /* Set the height of the textarea */
 }
 
 /* Adjust height of the 'Weapons Proficiencies' textarea */
