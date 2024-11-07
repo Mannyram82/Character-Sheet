@@ -364,12 +364,12 @@ textarea[placeholder="Saving Throws"] {
 }
 /* Adjust height of the 'Weapons and Damage/Type' textarea */
 textarea[placeholder="Weapons and Damage/Type"] {
-    height: 150px; /* Set the height of the textarea */
+    height: 500px; /* Set the height of the textarea */
 }
 
 /* Adjust height of the 'Equipment' textarea */
 textarea[placeholder="Equipment"] {
-    height: 150px; /* Set the height of the textarea */
+    height: 500px; /* Set the height of the textarea */
 }
 
 /* Adjust height of the 'Weapons Proficiencies' textarea */
@@ -380,4 +380,36 @@ textarea[placeholder="Weapon Proficiencies"] {
 /* Adjust height of the 'Other Proficiencies' textarea */
 textarea[placeholder="Other Proficiencies"] {
     height: 80px; /* Set the height of the textarea */
+}
+/* Specific styles for the Feats and Benefits textarea */
+.input-container {
+    position: relative; /* Positioning context for the label */
+}
+
+textarea#feats-textarea {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    padding-top: 35px; /* Space for the label to remain fixed */
+    padding-left: 10px; /* Space for text */
+    font-size: 16px; /* Matching font size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feats-textarea-label {
+    position: absolute;
+    top: 10px; /* Adjust based on your preference */
+    left: 10px; /* Adjust left alignment */
+    color: #888; /* Placeholder-like gray color */
+    font-size: 16px; /* Matching font size */
+    pointer-events: none; /* Make it non-interactive */
+    transition: all 0.2s ease; /* Smooth transition for label movement */
+}
+
+textarea#feats-textarea:focus + .feats-textarea-label {
+    opacity: 0; /* Hide label when textarea is focused */
+}
+
+textarea#feats-textarea:not(:focus) {
+    padding-top: 30px; /* Allow space for label when not focused */
 }
