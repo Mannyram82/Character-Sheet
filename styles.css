@@ -305,7 +305,7 @@ textarea[placeholder="Saving Throws"] {
 
 /* Input styling */
 .input-with-fixed-text {
-    padding-left: 150px; /* Creates space to start typing to the right of the fixed text */
+    padding-left: 160px; /* Creates space to start typing to the right of the fixed text */
     width: 100%;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -412,4 +412,10 @@ textarea#feats-textarea:focus + .feats-textarea-label {
 
 textarea#feats-textarea:not(:focus) {
     padding-top: 30px; /* Allow space for label when not focused */
+}
+/* Hide the print button when printing */
+@media print {
+    .print-button {
+        display: none;
+    }
 }
