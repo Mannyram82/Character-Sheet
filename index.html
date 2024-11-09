@@ -259,17 +259,28 @@
             <div class="section">
                 <h2>Spellcasting</h2>
                 <div class="row">
-                    <input type="number" placeholder="Mana" />
-                    <input type="number" placeholder="Spells Known" />
-                    <input type="number" placeholder="Spellsave DC" />
-                    <input type="number" placeholder="Spellcasting Modifier" />
+                    <div class="input-container">
+                        <span class="fixed-text">Mana</span>
+                        <input type="number" class="input-with-fixed-text" />
+                    </div>
+                    <div class="input-container">
+                        <span class="fixed-text">Spell Save DC</span>
+                        <input type="number" class="input-with-fixed-text" />
+                    </div>
+                    <div class="input-container">
+                        <span class="fixed-text">Spell Modifier</span>
+                        <input type="text" class="input-with-fixed-text" />
+                    </div>
                 </div>
                 <div class="row">
                     <textarea placeholder="Spells"></textarea>
                     <textarea placeholder="Magical Components"></textarea>
                 </div>
                 <div class="row">
-                    <input type="number" placeholder="Time Spent Crafting Spell" />
+                    <div class="input-container">
+                        <span class="fixed-text">Spellcrafting Time</span>
+                        <input type="text" class="input-with-fixed-text" />
+                    </div>
                 </div>
             </div>
             <!-- Grace System Section -->
